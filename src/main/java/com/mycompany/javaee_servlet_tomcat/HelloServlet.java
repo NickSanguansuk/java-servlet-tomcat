@@ -15,12 +15,14 @@ public class HelloServlet extends HttpServlet {
     public HelloServlet() {
     }
 
+    @Override
     public void init() throws ServletException {
         message = "Hello World! This is my JavaEE Servlet project using Tomcat.";
 
         System.out.println("Servlet Initialized.....value of count is: " + count);
     }
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
@@ -38,6 +40,7 @@ public class HelloServlet extends HttpServlet {
         count++;
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
