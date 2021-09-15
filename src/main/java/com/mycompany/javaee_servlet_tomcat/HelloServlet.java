@@ -2,6 +2,7 @@ package com.mycompany.javaee_servlet_tomcat;
 
 import java.io.*;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -14,18 +15,17 @@ public class HelloServlet extends HttpServlet {
     public HelloServlet() {
     }
 
-    public void init() {
+    public void init() throws ServletException {
         message = "Hello World! This is my JavaEE Servlet project using Tomcat.";
 
         System.out.println("Servlet Initialized.....value of count is: " + count);
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
         // Hello
         PrintWriter out = response.getWriter();
-        response.setContentType("text/html");
         out.println("<html><head>");
         out.println("<title>My First Servlet</title>");
         out.println("</head>");
@@ -41,7 +41,34 @@ public class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        doGet(request, response);
+        //doGet(request, response);
+
+        String usernameReal = "WasinSanguansuk";
+        String passwordReal = "MySuperSecret";
+        String usernameIn = request.getParameter("username");
+        String passwordIn = request.getParameter("password");
+
+        if (usernameReal.equals(usernameIn) && passwordReal.equals(passwordIn)) {
+            request.setAttribute("username", usernameIn);
+            request.setAttribute("password", passwordIn);
+            RequestDispatcher rd = request.getRequestDispatcher("/success.jsp");
+            rd.forward(request, response);
+        } else {
+            request.setAttribute("username", usernameIn);
+            request.setAttribute("password", passwordIn);
+            RequestDispatcher rd = request.getRequestDispatcher("/failure.jsp");
+            rd.forward(request, response);
+        }
+
+        //response.setContentType("text/html");
+        //PrintWriter pw = response.getWriter();
+        //pw.print("<html><head>");
+        //pw.print("<title>Welcome to the Web World</title>");
+        //pw.println("</head>");
+        //pw.println("<body>");
+        //pw.println("<h2>username is: " + usernameIn + "</h2>\n");
+        //pw.println("<h2>password is: " + passwordIn + "</h2>\n");
+        //pw.println("</body></html>");
     }
 
     @Override
