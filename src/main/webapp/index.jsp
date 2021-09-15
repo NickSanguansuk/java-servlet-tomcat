@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link  rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="js/script.js" defer type="text/javascript"></script>
 </head>
 <body>
@@ -26,6 +26,9 @@
             </form>
         </div>
     </div>
+
+    <%--<% session.invalidate(); %>--%>
+    <%--<%= session.getAttribute("test1") %>--%>
 
     <h3><%= "Hello World! I am Wasin Sanguansuk from Per Scholas Chicago IL." %>
     </h3>

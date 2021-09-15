@@ -15,15 +15,18 @@
         <welcome-file>default.jsp</welcome-file>
     </welcome-file-list>
 
+    <!--
     <servlet>
         <description></description>
         <display-name>HelloServlet</display-name>
         <servlet-name>helloServlet</servlet-name>
-        <servlet-class>com.mycompany.javaee_servlet_tomcat.HelloServlet</servlet-class>
+        <servlet-class>com.company.javaee_servlet_tomcat.HelloServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/hello-servlet</url-pattern>
     </servlet-mapping>
+    -->
+
 </web-app>
