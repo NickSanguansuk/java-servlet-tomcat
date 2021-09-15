@@ -1,0 +1,25 @@
+
+[_ URL _]
+
+http://localhost:8080/javaee-servlet-tomcat/
+
+[_ Resources _]
+
+Follow this YouTube to download, install, and set environment for Tomcat
+- https://www.youtube.com/watch?v=vFddw-BAB8Y
+
+Follow this YouTube video to create Servlet project using Tomcat
+- https://www.youtube.com/watch?v=JIRDMGJ66SE
+
+Follow this IntelliJ webpage to create Servlet project using Tomcat
+- https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-ee-application.html#modify
+Go To > Run > Edit Configurations > Add Tomcat Server as Local
+Don't forget to set:
+On Update Action        ---> Redeploy
+On Frame Deactivation   ---> Update Resources
+
+Use this web side to find dependencies
+- https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.26
+
+
+
