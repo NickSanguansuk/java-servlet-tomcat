@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <h3><%= "Hello World! I am Wasin Sanguansuk from Per Scholas Chicago." %>
+    <h3><%= "Hello World! I am Wasin Sanguansuk from Per Scholas Chicago IL." %>
     </h3>
     <br/>
     <a href="hello-servlet">Click here to call "Hello Servlet"</a>
